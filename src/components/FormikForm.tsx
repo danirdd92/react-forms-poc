@@ -1,7 +1,10 @@
 import { useFormik } from 'formik';
+import { useRef } from 'react';
 import { schema } from '../schema/schema';
 import { Container, InputGroup, Label, Input, CheckboxGroup, Checkbox, Button, ErrorValidation } from './base-ui';
 const FormikForm = () => {
+	const renderCouter = useRef(0);
+
 	const { errors, touched, values, handleChange, handleSubmit } = useFormik({
 		initialValues: {
 			email: '',
@@ -15,6 +18,8 @@ const FormikForm = () => {
 			alert(output);
 		},
 	});
+
+	console.log('Formik Form render counter: ', renderCouter.current++);
 
 	return (
 		<Container>

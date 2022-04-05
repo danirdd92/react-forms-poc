@@ -2,7 +2,9 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { schema } from '../schema/schema';
 import { Container, InputGroup, Label, Input, CheckboxGroup, Checkbox, Button, ErrorValidation } from './base-ui';
+import { useRef } from 'react';
 const ReactHookForm = () => {
+	const renderCouter = useRef(0);
 	const {
 		register,
 		handleSubmit,
@@ -16,6 +18,7 @@ const ReactHookForm = () => {
 		alert(output);
 	};
 
+	console.log('React Hook Form render counter: ', renderCouter.current++);
 	return (
 		<Container>
 			<form onSubmit={handleSubmit(onSubmit)}>

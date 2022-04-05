@@ -1,7 +1,8 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useRef, useState } from 'react';
 import { Button, Checkbox, CheckboxGroup, Container, ErrorValidation, Input, InputGroup, Label } from './base-ui';
 
 const VanilaForm = () => {
+	const renderCouter = useRef(0);
 	const [formData, setFormData] = useState({
 		email: '',
 		firstName: '',
@@ -89,6 +90,8 @@ const VanilaForm = () => {
 			alert(output);
 		}
 	};
+
+	console.log('Valila Form render counter: ', renderCouter.current++);
 
 	return (
 		<Container>
