@@ -64,11 +64,24 @@ export const Label = styled.label`
 `;
 
 export const ErrorValidation = styled.span`
-	color: #4f1313;
-	background-color: #d97878;
+	color: #811919;
+	background-color: #d978784b;
 	font-size: 0.75rem;
 	font-weight: 600;
 	border-radius: 0.25rem;
-	padding: 0.75rem;
+	padding: 0.5rem;
 	margin-top: 0.0125rem;
+`;
+
+export const Button = styled.button`
+	margin-inline: auto;
+	background: #0066a2;
+	color: white;
+	border-style: outset;
+	border-color: #0066a2;
+	height: 40px;
+	width: auto;
+	margin-top: 0.75rem;
+	font: bold15px arial, sans-serif;
+	text-shadow: none;
 `;
