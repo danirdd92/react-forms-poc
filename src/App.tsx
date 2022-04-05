@@ -2,6 +2,7 @@ import 'normalize.css';
 import './App.css';
 import { FormsContainer } from './components/base-ui';
 import FormikForm from './components/FormikForm';
+import ReactHookForm from './components/ReactHookForm';
 import VanilaForm from './components/VanilaForm';
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
 		<FormsContainer>
 			<VanilaForm />
 			<FormikForm />
-			<VanilaForm />
+			<ReactHookForm />
 		</FormsContainer>
 	);
 }

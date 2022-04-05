@@ -1,5 +1,4 @@
 import { useFormik } from 'formik';
-import React from 'react';
 import { schema } from '../schema/schema';
 import { Container, InputGroup, Label, Input, CheckboxGroup, Checkbox, Button, ErrorValidation } from './base-ui';
 const FormikForm = () => {
